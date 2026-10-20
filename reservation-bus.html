@@ -9,7 +9,7 @@
 <body>
 <main>
  <section class="card">
-  <h1>🚌 Vue de dessus du bus</h1>
+  <h1>Voiture numéro 1</h1>
   <p class="sub">26 places : 2 près du conducteur + 6 rangées de 4. Sélectionnez une place par matricule.</p>
   <div class="bus-spacing"></div>
   <div class="bus">
@@ -27,10 +27,10 @@
   <div class="card">
    <div class="stats"><div><b id="nFree">0</b><span>Libres</span></div><div><b id="nSel">0</b><span>Sélection</span></div><div><b id="nRes">0</b><span>Réservées</span></div></div>
    <h2>Réserver</h2>
-   <label for="matricule">Matricule (7 caractères)</label>
-   <input id="matricule" placeholder="ex. AB12345" minlength="7" maxlength="7" autocomplete="off">
+   <label for="matricule">Matricule (7 caractères maximum)</label>
+   <input id="matricule" placeholder="ex. 2900" maxlength="7" autocomplete="off">
    <label for="name">Nom du passager</label>
-   <input id="name" placeholder="ex. Awa Rakoto" autocomplete="off">
+   <input id="name" placeholder="ex. Mathieu" autocomplete="off">
    <button class="btn" id="go" disabled>Réserver la place sélectionnée</button>
    <div id="msg" role="status"></div>
   </div>

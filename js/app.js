@@ -64,8 +64,13 @@
       nameInput.focus();
       return;
     }
-    if ([...matricule].length !== 7) {
-      message.textContent = "Le matricule doit contenir exactement 7 caractères.";
+    if (!matricule) {
+      message.textContent = "Veuillez saisir le matricule.";
+      matriculeInput.focus();
+      return;
+    }
+    if ([...matricule].length > 7) {
+      message.textContent = "Le matricule ne peut pas dépasser 7 caractères.";
       matriculeInput.focus();
       return;
     }
