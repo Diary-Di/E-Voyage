@@ -45,10 +45,14 @@
       seats.sort((a, b) => a - b);
       const item = document.createElement("li");
       const description = document.createElement("span");
-      description.textContent =
-        (name === "Nom non disponible" ? "Place" : name + " – place") +
-        (seats.length > 1 ? "s " : " ") + seats.join(", ") +
-        (name === "Nom non disponible" ? " (réservée)" : "");
+      if (name === "Indisponible") {
+        description.textContent = "Place " + seats.join(", ") + " (indisponible)";
+      } else {
+        description.textContent =
+          (name === "Nom non disponible" ? "Place" : name + " – place") +
+          (seats.length > 1 ? "s " : " ") + seats.join(", ") +
+          (name === "Nom non disponible" ? " (réservée)" : "");
+      }
       item.append(description);
       list.appendChild(item);
     });

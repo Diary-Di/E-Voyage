@@ -3,6 +3,7 @@
   const { createClient, loadReservations, createReservation } = window.BusReservations;
 
   const booked = {};
+  const defaultOccupiedSeats = { 2: "Indisponible" };
   const selected = new Set();
   const message = document.getElementById("msg");
   const nameInput = document.getElementById("name");
@@ -27,6 +28,7 @@
   async function refreshReservations() {
     const reservations = await loadReservations(client);
     Object.keys(booked).forEach(seat => delete booked[seat]);
+    Object.assign(booked, defaultOccupiedSeats);
     Object.assign(booked, reservations);
     ready = true;
     render();
