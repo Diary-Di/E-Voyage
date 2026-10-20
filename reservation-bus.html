@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Réservation de places – Bus 26 places</title>
+<link rel="stylesheet" href="./css/reservation-bus.css">
+</head>
+<body>
+<main>
+ <section class="card">
+  <h1>🚌 Vue de dessus du bus</h1>
+  <p class="sub">26 places : 2 près du conducteur + 6 rangées de 4. Sélectionnez une place par matricule.</p>
+  <div class="bus-spacing"></div>
+  <div class="bus">
+   <div class="door" title="Porte"></div>
+   <div class="front" id="front"><div class="driver"><span class="wheel"></span>Conducteur</div><span class="aisle"></span></div>
+   <div class="rows" id="rows"></div>
+  </div>
+  <div class="legend">
+   <span><i class="legend-free"></i>Libre</span>
+   <span><i class="legend-selected"></i>Sélectionnée</span>
+   <span><i class="legend-reserved"></i>Réservée</span>
+  </div>
+ </section>
+ <section class="side">
+  <div class="card">
+   <div class="stats"><div><b id="nFree">0</b><span>Libres</span></div><div><b id="nSel">0</b><span>Sélection</span></div><div><b id="nRes">0</b><span>Réservées</span></div></div>
+   <h2>Réserver</h2>
+   <label for="matricule">Matricule (7 caractères)</label>
+   <input id="matricule" placeholder="ex. AB12345" minlength="7" maxlength="7" autocomplete="off">
+   <label for="name">Nom du passager</label>
+   <input id="name" placeholder="ex. Awa Rakoto" autocomplete="off">
+   <button class="btn" id="go" disabled>Réserver la place sélectionnée</button>
+   <div id="msg" role="status"></div>
+  </div>
+  <div class="card">
+   <h2>Réservations</h2>
+   <ul id="list"></ul>
+  </div>
+ </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./js/supabase-config.js"></script>
+<script src="./js/reservations.js"></script>
+<script src="./js/bus-view.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>

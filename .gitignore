@@ -1,0 +1,19 @@
+# Local Supabase credentials and environment configuration
+/js/supabase-config.js
+.env
+.env.*
+!.env.example
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local tooling and generated files
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+dist/
+build/
