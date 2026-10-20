@@ -1,0 +1,8 @@
+{
+  "name": "e-voyage",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js"
+  }
+}
